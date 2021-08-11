@@ -9,26 +9,36 @@ public class Excercise
         //int loop = 5;
         //int max =0;
         //int min =0;
-        int a =0;
+        int p =0;
         int s =0;
         int b =0;
+        int f =0;
+        //
 
         System.out.println("プレイボール");
         while(s<3&&b<4){
-            System.out.print("ストライク=1 or ボール=2 ？");
+            System.out.print("ストライク=1 or ボール=2 or ファール=3？>");
 
-            a = Integer.parseInt(br.readLine());
-            if(a==1){
-                s += 1;
-            }else if(a==2){
-                b += 1;
+            p = Integer.parseInt(br.readLine());
+            if(p==1){
+                s ++;
+                System.out.println("ストライク！");
+            }else if(p==2){
+                b ++;
+                System.out.println("ボール！");
+            }else if(p==3){
+                if(s<2){
+                    s ++;
+                }
+                f ++;
+                System.out.println("ファール！");
             }else{
-                System.out.println("ちがうよ");
+                System.out.println("入力がちがうよ");
             }
         }
 
 
-        System.out.print("ストライク"+s+"　　ボール"+b);
+        System.out.print("ストライク"+s+"　　ボール"+b+"   ファール"+f);
         //System.out.println(sum);
         /*
         for(int i=1;sum<100;i++){
