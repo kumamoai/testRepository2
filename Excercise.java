@@ -10,11 +10,31 @@ public class Excercise
         //int max =0;
         //int min =0;
         int p =0;
-        int s =0;
-        int b =0;
-        int f =0;
-        //
+        int sCount =0;
+        //int s =0;
+        //int b =0;
+        //int f =0;
+        
+        System.out.print("素数判定したい数字は？＞");
+        p = Integer.parseInt(br.readLine());
+        
+        for(int i=2;i<p;i++){
+            if(p%i!=0){
+                //System.out.println(i+"は割り切れない…!");
+            }else{
+                //System.out.println(i+"で割り切れるので"+p+"は素数ではない！");
+                sCount ++;
+            }
+        }
 
+        if(sCount >0){
+            System.out.println("結論："+p+"は素数じゃない");
+        }else{
+            System.out.println("結論："+p+"は素数");
+        }
+        
+
+        /*
         System.out.println("プレイボール");
         while(s<3&&b<4){
             System.out.print("ストライク=1 or ボール=2 or ファール=3？>");
@@ -76,5 +96,6 @@ public class Excercise
         
         //System.out.println("最大値は"+max+"です");
         //System.out.println("最小値は"+min+"です");
+        
     }
 }   
