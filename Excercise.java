@@ -6,32 +6,35 @@ public class Excercise
     {
         BufferedReader br = new BufferedReader( new InputStreamReader( System.in ) );
         //int sum = 0;
-        //int loop = 5;
+        //int loop = 2;
         //int max =0;
         //int min =0;
         int p =0;
-        int sCount =0;
+        //int sCount =0;
         //int s =0;
         //int b =0;
         //int f =0;
         
-        System.out.print("素数判定したい数字は？＞");
+        System.out.print("素因数分解したい数字は？＞");
         p = Integer.parseInt(br.readLine());
         
-        for(int i=2;i<p;i++){
-            if(p%i!=0){
-                //System.out.println(i+"は割り切れない…!");
-            }else{
-                //System.out.println(i+"で割り切れるので"+p+"は素数ではない！");
-                sCount ++;
+        System.out.print("素数→");
+
+        for(int i =2;p > 1;i++){
+            while(p%i==0){
+                System.out.print(i +",");
+                p /= i;
             }
         }
 
+        //素数判定
+        /*
         if(sCount >0){
             System.out.println("結論："+p+"は素数じゃない");
         }else{
             System.out.println("結論："+p+"は素数");
         }
+        */
         
 
         /*
