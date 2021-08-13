@@ -5,27 +5,36 @@ public class Excercise
     public static void main( String[] args ) throws IOException
     {
         BufferedReader br = new BufferedReader( new InputStreamReader( System.in ) );
-        //int sum = 0;
         //int loop = 2;
         //int max =0;
         //int min =0;
+        int a =1; //０が入力されたかの判定用
         int p =0;
+        int sum =0;
         //int sCount =0;
         //int s =0;
         //int b =0;
         //int f =0;
         
-        System.out.print("素因数分解したい数字は？＞");
-        p = Integer.parseInt(br.readLine());
-        
-        System.out.print("素数→");
+        while(a!=0){
+            System.out.print("入力は？＞");
+            p = Integer.parseInt(br.readLine());
+            a = p;
+            sum += p;
+        }
 
+        System.out.println("合計は"+sum);
+        
+
+        
+        /*
         for(int i =2;p > 1;i++){
             while(p%i==0){
                 System.out.print(i +",");
                 p /= i;
             }
         }
+        */
 
         //素数判定
         /*
