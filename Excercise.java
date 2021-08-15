@@ -9,23 +9,25 @@ public class Excercise
         //int max =0;
         //int min =0;
         //int a =1; //０が入力されたかの判定用
-        //int p =0;
+        int p =0;
         //int sum =0;
         //double Count =0;
         //int s =0;
         //int b =0;
         //int f =0;
         
-
-        //九九出力
-        for(int q1=1;q1<=9;q1++){
-            for(int q2=1;q2<=9;q2++){
-                System.out.print(q1+"×"+q2+"=");
-                System.out.printf("%2d",q1*q2);
-                System.out.println(" ");
+        //三角形描画
+        System.out.print("入力は？＞");
+        p = Integer.parseInt(br.readLine());
+        for(int d=p;d>0;d--){
+            for(int c=d;c>0;c--){
+                System.out.print("■");
             }
+            System.out.println("");
+
         }
 
+        
         /*
         while(a!=0){
             System.out.print("入力は？＞");
