@@ -5,27 +5,37 @@ public class Excercise
     public static void main( String[] args ) throws IOException
     {
         BufferedReader br = new BufferedReader( new InputStreamReader( System.in ) );
-        //int loop = 2;
+        int loop = 1;
         //int max =0;
         //int min =0;
         //int a =1; //０が入力されたかの判定用
-        int p =0;
+        int s =0;
         //int sum =0;
         //double Count =0;
         //int s =0;
         //int b =0;
         //int f =0;
         
-        //三角形描画
-        System.out.print("入力は？＞");
-        p = Integer.parseInt(br.readLine());
-        for(int d=p;d>0;d--){
-            for(int c=d;c>0;c--){
-                System.out.print("■");
+        //バツ描画
+        System.out.print("サイズは？＞");
+        s = Integer.parseInt(br.readLine());
+        
+
+        for(int t=1;t<=s;t++){ //t:縦
+            for(int y=1;y<=s;y++){ //y:横
+                if(y==t||(t+y)==(s+1)){
+                    System.out.print("X");
+                }else{
+                    System.out.print(" ");
+                }            
             }
             System.out.println("");
-
         }
+        
+
+        //偶数のとき
+
+    
 
         
         /*
