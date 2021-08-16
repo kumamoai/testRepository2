@@ -4,37 +4,40 @@ public class Excercise
 {
     public static void main( String[] args ) throws IOException
     {
-        BufferedReader br = new BufferedReader( new InputStreamReader( System.in ) );
-        int loop = 1;
+        //BufferedReader br = new BufferedReader( new InputStreamReader( System.in ) );
+        //int l = 1; //loop
         //int max =0;
         //int min =0;
         //int a =1; //０が入力されたかの判定用
-        int s =0;
+        int one =0; //一つ目の数
+        int two =1; //二つ目の数
         //int sum =0;
         //double Count =0;
         //int s =0;
         //int b =0;
         //int f =0;
         
-        //バツ描画
-        System.out.print("サイズは？＞");
-        s = Integer.parseInt(br.readLine());
-        
+        //フィボナッチ数列
+        System.out.println("フィボナッチ数列");
+        System.out.print(one+",");
+        System.out.print(two+",");
 
-        for(int t=1;t<=s;t++){ //t:縦
-            for(int y=1;y<=s;y++){ //y:横
-                if(y==t||(t+y)==(s+1)){
-                    System.out.print("X");
-                }else{
-                    System.out.print(" ");
-                }            
-            }
-            System.out.println("");
+        for(int l = 0;l>=0;l++){
+            if(one+two>1000){
+                break;
+            }else if(l%2==0){
+                one =one + two;
+                System.out.print(one+",");
+            }else{
+                two = one + two;
+                System.out.print(two+",");
+            }    
+
         }
         
 
-        //偶数のとき
 
+        
     
 
         
