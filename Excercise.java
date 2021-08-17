@@ -4,20 +4,35 @@ public class Excercise
 {
     public static void main( String[] args ) throws IOException
     {
-        //BufferedReader br = new BufferedReader( new InputStreamReader( System.in ) );
+        BufferedReader br = new BufferedReader( new InputStreamReader( System.in ) );
         //int l = 1; //loop
         //int max =0;
         //int min =0;
         //int a =1; //０が入力されたかの判定用
-        int one =0; //一つ目の数
-        int two =1; //二つ目の数
+        //int one =0; //一つ目の数
+        //int two =1; //二つ目の数
+        int v[]=new int[10];
+
         //int sum =0;
         //double Count =0;
         //int s =0;
         //int b =0;
         //int f =0;
+
+        for( int i = 0 ; i < 10 ; i++ ){
+            System.out.print("入力は？＞");
+            v[i] = Integer.parseInt( br.readLine());  
+        }
+    
+
+        for( int i = 0 ; i < 10 ; i++ ){
+            System.out.println(v[i]+"の２倍は"+v[i] * 2 );
+        }
+            //for(int i=0)
+        
         
         //フィボナッチ数列
+        /*
         System.out.println("フィボナッチ数列");
         System.out.print(one+",");
         System.out.print(two+",");
@@ -34,7 +49,7 @@ public class Excercise
             }    
 
         }
-        
+        */
 
 
         
