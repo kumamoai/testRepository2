@@ -11,7 +11,7 @@ public class Excercise
         //int a =1; //０が入力されたかの判定用
         //int one =0; //一つ目の数
         //int two =1; //二つ目の数
-        int v[]=new int[10];
+        int[] v =new int[10];
 
         //int sum =0;
         //double Count =0;
@@ -19,14 +19,14 @@ public class Excercise
         //int b =0;
         //int f =0;
 
-        for( int i = 0 ; i < 10 ; i++ ){
+        for( int i =0  ; i < 10 ; i++ ){
             System.out.print("入力は？＞");
             v[i] = Integer.parseInt( br.readLine());  
         }
     
 
-        for( int i = 0 ; i < 10 ; i++ ){
-            System.out.println(v[i]+"の２倍は"+v[i] * 2 );
+        for( int i = 9 ; i < 10 ; i-- ){
+            System.out.println(v[i]);
         }
             //for(int i=0)
         
