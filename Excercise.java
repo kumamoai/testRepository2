@@ -15,34 +15,23 @@ public class Excercise
 
         //int sum =0;
         //double Count =0;
-        //int s =0;
+        int sum =0;
+        int sum2 =0;
         //int b =0;
         //int f =0;
 
         for( int i =0  ; i < 10 ; i++ ){
             System.out.print((i+1)+"番目の入力は？＞");
             v[i] = Integer.parseInt( br.readLine());  
-        }
-    
-
-        System.out.print("偶数:");
-        for( int i = 0 ; i < 10 ; i++ ){
-            
-            if(v[i]%2==0){
-                System.out.print(v[i]+" ");
-            }else{
+            sum += v[i];
+            if(sum>=100||i==9){
+                for(i =0; i<10;i++){
+                    sum2 += v[i];
+                }
             }
         }
+        System.out.println(sum2);
 
-        System.out.println();
-        System.out.print("奇数:");
-        for( int i = 0 ; i < 10 ; i++ ){
-            
-            if(v[i]%2!=0){
-                System.out.print(v[i]+" ");
-            }else{
-            }
-        }
         
     }
 }   
