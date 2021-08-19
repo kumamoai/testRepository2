@@ -6,26 +6,51 @@ public class Excercise
     {
         BufferedReader br = new BufferedReader( new InputStreamReader( System.in ) );
  
-        //  九九表プログラム
-        int a=0;
-        int b=0;
+        //ソートプログラム
 
-        System.out.print("入力１＞");
-        a = Integer.parseInt( br.readLine() );
-        System.out.print("入力２＞");
-        b = Integer.parseInt( br.readLine() );
+        int temp =0;
+        int loop =0;
+        int sort[] = new int[10]; 
 
-        int kuku[][] = new int[9][9];
-        // 配列 kuku に値を代入する
-        for( int i = 0 ; i < 9 ; i++ ){
-            for( int j = 0 ; j < 9 ; j++ ){
-                kuku[i][j]=(i+1)*(j+1);
 
-                //System.out.printf("%2d", kuku[i][j]);
-                //System.out.print(" ");        
-            }
-            //System.out.println();
+        //とりあえず配列に10個数値を入れる
+        for(int i=0;i<10;i++){
+            System.out.print("入力"+(i+1)+"は");
+            sort[i]=Integer.parseInt(br.readLine());
         }
-        System.out.println(kuku[a-1][b-1]);
+
+        //表示
+        System.out.print("ソート前>");
+        for(int i=0;i<10;i++){
+            System.out.print(sort[i]+",");
+        }
+      
+        for(int b=0;b<10;b++){        
+            for(int a=1;a<10;a++){
+                //入れ替え
+                if(sort[a]<sort[a-1]){
+                    temp = sort[a];
+                    sort[a]=sort[a-1];
+                    sort[a-1]=temp;
+
+                    //表示
+                    System.out.println();
+                    System.out.print(loop+"ソート>");
+                    for(int i=0;i<10;i++){
+                    System.out.print(sort[i]+",");
+                    }
+                    
+                    loop ++;
+            
+                }
+            }
+        }
+
+        //表示
+        System.out.println();
+        System.out.print("ソート完了>");
+        for(int i=0;i<10;i++){
+            System.out.print(sort[i]+",");
+        }
     }
 }   
