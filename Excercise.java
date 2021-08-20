@@ -1,15 +1,17 @@
 import java.io.*;
 
-//メソッド一発目
-//ただコピペしただけ
+
 public class Excercise
 {
-    public static void main( String[] args ){
-        System.out.println( "3の2乗=" + pow2( 3 ) );
+    
+    public static void main( String[] args )throws IOException{
+        //System.out.println( "3の2乗=" + pow2( 3 ) );
+
+        System.out.println("平均は"+ ave(3,15));
     }
    
-    static int pow2( int n )
+    static int ave(int n , int m)
     {
-        return n * n;
+        return (n + m) /2;
     }
 }
