@@ -22,7 +22,15 @@ public class Excercise
             kuku(dan);
         }
         */
-        sosu(7);
+
+        //sosu(6);
+        System.out.println("test");
+        
+        for(int a =4;a<10;a++){
+            sosu(a);
+        }
+        
+        
     }
     static void sosu(int kari){
         /*
@@ -31,16 +39,21 @@ public class Excercise
         p = Integer.parseInt(br.readLine());
         */
     
-        for(int i=2;i<=kari;i++){
-            if(kari%i!=0){
-                System.out.print("");
-            }else if(kari%i==0){
-                System.out.print("");
-            }else if(i==kari){
+        int i = 2;
+        while( i < 10000){
+            if(kari==i){
                 System.out.println(i);
-            }else{
-                
+                i++;
+            /*
+            }else if(kari%i!=0){ //割り切れなかったら
+                i++;
+            */
+            }else if(kari%i==0){ //割り切れたら
+                i++;
+                continue;
             }
+        
         }
+        
     }
 }
