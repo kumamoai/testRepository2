@@ -13,13 +13,13 @@ public class Excercise{
         }
     }
 
-    static boolean judge(int num){
+    static boolean judge(int num){ //審議判定
 
-        for(int i =2;i<num;i++){
+        for(int i =2;i<num;i++){ //numを追いかける
             if((num%i)==0){ //割り切れたら
-                return false;
+                return false; //falseを出力する
             }   
-        }
-        return true;
+        } //割り切れなかったらループから出て、
+        return true; //trueを出力して、メソッド終わり
     }
 }
